@@ -1,0 +1,50 @@
+.contents-wrapper
+{
+	width: 600px;
+	height: fit-content;
+}
+.form-container
+{
+	width: 600px;
+	height: fit-content;
+	padding: 20px;
+	border-radius: 5px;
+	background: linear-gradient(to left,white,blue);
+	margin-top: 15%;
+	margin-left: 25%;
+}
+form
+{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.form-control
+{
+	width: 100%;
+}
+.btn
+{
+	margin-left: 20px;
+}
+.top-wrapper
+{
+	display: flex;
+	flex-direction: row;
+}
+.copyright-wrapper
+{
+		margin-top: 10px;
+		margin-left: 4%;
+		padding: 10px;
+}
+.copyright-wrapper>a
+{
+	text-decoration: none;
+	color: white;
+}
+.tasks-container
+{
+	margin-left: 25%;
+	margin-top: 10px;
+}

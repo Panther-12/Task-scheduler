@@ -1,0 +1,44 @@
+	<html>
+		<head>
+			<title>Task handler</title>
+			<link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+			<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+		</head>
+		<body>
+			{%for message in get_flashed_messages()%}
+				<div class="alert alert-warning">
+					<button type="button" class="close" data-dismiss="alert"></button>
+					{{message}}
+				</div>
+			{%endfor%}
+			<div class="contents-wrapper">
+				<div class="form-container">
+					<div class="top-wrapper">
+						<form method='POST'>
+							{{form.hidden_tag()}}
+							{{form.text(class="form-control", placeholder="Enter task")}}
+							{{form.submit(class="btn btn-primary", placeholder="Create")}}
+							</form>
+					</div>
+					<div class="copyright-wrapper">
+						<a href="#">Copyright. Owned by Nimrod Nyongesa</a>
+					</div>
+					<div class="buttons-wrapper">
+						<a href="{{url_for('.delete_all')}}">
+							<button type="button" class="btn btn-primary">
+								Reset
+							</button>
+						</a>
+						<a href="{{url_for('.remove_completed')}}"></a>
+					</div>
+				</div>
+				<div class="tasks-container">
+					<ul>
+						{% for task in tasks%}
+							<li>{{task.task}}</li>
+						{%endfor%}
+					</ul>
+				</div>
+			</div>
+		</body>
+	</html>

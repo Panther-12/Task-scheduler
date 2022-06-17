@@ -1,0 +1,7 @@
+Hello {{name}}
+Welcome to Task Scheduler!!!
+
+A new task has been added to the board.
+Click the link below to go back to homepage {{url_for('.index',_external=True)}}
+
+Task scheduler team.
